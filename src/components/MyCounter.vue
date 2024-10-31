@@ -9,5 +9,8 @@
   </section>
 </template>
 
-<script lang="ts" src="./CounterScript2">
+<script lang="ts" setup>
+import { useCounter } from "./composable/useCounter";
+
+const { counter, squareCounter } = useCounter();
 </script>

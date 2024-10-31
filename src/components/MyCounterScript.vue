@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h3>Counter: {{ counter }}</h3>
+    <h3 className="text-4xl font-bold underline">Counter: {{ counter }}</h3>
     <h3>Square: {{ squareCounter }}</h3>
     <div>
       <button @click="counter++">+1</button>
@@ -11,6 +11,9 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from 'vue';
+import { useCounter } from './composable/useCounter';
+
+const { counter, squareCounter } = useCounter();
 
 export default defineComponent({
   props: {
